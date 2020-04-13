@@ -6,7 +6,7 @@ export const useImageAPI=(image)=>{
 
     const [imageimgAlt, setimageimgAlt] = useState("")
     useEffect(() => {
-        Axios.get(`https://pixabay.com/api/?key=14218850-657ec90f61321ccb7cbf65a74&q=${image}+img&image_type=photo`)
+        Axios.get(`https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${image}+img&image_type=photo`)
         .then(res=> console.log("imageimgAlt:",res))
         .then(res => setimageimgAlt(res))
             .catch(err => console.error(err))
@@ -25,5 +25,18 @@ useEffect(()=>{
         
 },[image])
 
-    return[img,imageimgAlt]
+
+const [celebIMG,setCelebIMG]=useState()
+useEffect(()=>{
+    Axios.get(
+        `https://api.themoviedb.org/3/search/person?api_key=${process.env.REACT_APP_MOVIEDB_API_KEY}&language=en-US&query=${image}&page=1&include_adult=false`)
+        .then(response=>setCelebimg(response.data))
+        .then(response=>console.log("img:",celebIMG,"response:",response))
+
+        .catch(error=>console.error(error))
+
+        
+},[image])
+
+    return[img,imageimgAlt,celebIMG]
 }

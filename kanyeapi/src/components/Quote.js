@@ -17,7 +17,7 @@ const Quote = ({ quote, error, isLoading, fetchKanyeQuote }) => {
           <p>{quote}</p>
 
           <img
-            src={kanyeImg || kanyeImgAlt||`https://image.tmdb.org/t/p/original/aiLF9OBQ7LcglmAg0pXjyonGwye.jpg`}
+            src={yeezy|| kanyeImgAlt||`https://image.tmdb.org/t/p/original/aiLF9OBQ7LcglmAg0pXjyonGwye.jpg`}
             styles={{ zIndex: "2", width: "100%" }}
             alt="images of Kanye West"
           />
