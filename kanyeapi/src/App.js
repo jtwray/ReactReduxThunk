@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import { connect } from "react-redux"
+import { fetchKanyeQuote } from './actions'
+
 import './App.css';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={() => { props.fetchKanyeQuote() }}>share swagger</button>
+      {props.error && <div>{props.error}</div>}
+      {
+        (props.isLoading) ?
+          (<div>....loading swagggguh</div>) :
+            (<><div>the swaggggguh:{props.quote}</div></>)
+      }
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    isLoading: state.isLoading, error: state.error, quote: state.quote,
+  }
+}
+export default connect(mapStateToProps, { fetchKanyeQuote })(App);
