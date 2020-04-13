@@ -4,7 +4,7 @@ import { KANYE_LOAD_START, KANYE_LOAD_SUCCESS, KANYE_LOAD_ERR } from "../actions
 const initialState = {
     isLoading: false,
     error: "",
-    quote: "tucker is smart as a whippersnapper",
+    quote: "👆🏾 ask Kanye",
 };
 
  const fetchReducer = (state = initialState, action) => {
@@ -16,7 +16,7 @@ const initialState = {
 
             };}
         case KANYE_LOAD_SUCCESS:{
-            console.log(action.payload,"logthisshitdamnit");
+            console.log(action.payload);
             return {
                 ...state,
                 quote: [action.payload],
