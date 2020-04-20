@@ -1,8 +1,8 @@
 import React from "react";
 import yeezy from "./../images/kanyeSnippitNewYearsShades.PNG";
 import { connect } from "react-redux";
-import { fetchKanyeQuote } from "../../kanyeapi/src/actions";
-import { useImageAPI } from "../../kanyeapi/src/hooks/useImageAPI";
+import { fetchKanyeQuote } from "../actions";
+import { useImageAPI } from "../hooks/useImageAPI";
 import "../App.css";
 
 const img1 = yeezy;
