@@ -207,7 +207,7 @@ p.quote {
   margin: 2rem;
   padding:1rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 600px and max-width:880px) {
   img {
     max-width: 50vw;
     width: 100%;
@@ -224,7 +224,7 @@ p.quote {
   }
 
 }
-@media (min-width: 881px) {
+@media (min-width: 881px and max-width:1080px) {
   img {
     width :auto;
   }
@@ -249,8 +249,16 @@ p.quote {
 
 
 @media (min-width: 1080px) {
-  img {
-    max-height: 50vh;
+  .gridContainer{
+    display: grid;
+gap: 1rem;
+  grid-template-columns: 1fr 1fr 3fr 3fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 3fr 3fr 1fr 1fr;
+   
+} 
+img {
+    grid-column: 3/ span 3;
+    grid-row: 3/span 3;
   }
   body {
     margin-top: 100px;
@@ -259,6 +267,11 @@ p.quote {
     margin: 4rem auto;
   }
   button {
-    width: 50vw;
+    grid-column:6/span 3 ;
+    grid-row: 3/span 1;
+  }
+  p.quote{
+    grid-column: 6/span 3;
+    grid-row: 5/auto;
   }
 }

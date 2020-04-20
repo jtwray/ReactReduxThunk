@@ -19,7 +19,7 @@ const Quote = ({ quote, error, isLoading, fetchKanyeQuote,isCartoon  }) => {
       {error && (<div>{error}</div>)({ isLoading }) ? (
         <div>...its Comin`</div>
       ) : (
-        <div>
+        <div className="gridContainer">
           <img
             src={(isCartoon == true ? img2 : yeezy || kanyeImgAlt || img2)}
             styles={{ zIndex: "2" }}
