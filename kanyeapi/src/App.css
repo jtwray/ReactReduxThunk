@@ -207,22 +207,6 @@ p.quote {
   margin: 2rem;
   padding:1rem;
 }
-
-@media (min-width: 881px) {
-  img {
-    max-height: 50vh;
-  }
-  body {
-    margin-top: 100px;
-  }
-  .button--container {
-    margin: 4rem auto;
-  }
-  button {
-    width: 50vw;
-  }
-}
-
 @media (min-width: 600px) {
   img {
     max-width: 50vw;
@@ -238,7 +222,43 @@ p.quote {
   p {
     margin: 20px opx;
   }
-  * {
-    margin: 1rem 0;
+
+}
+@media (min-width: 881px) {
+  img {
+    width :auto;
+  }
+  body {
+    margin-top: 1rem;
+  }
+  .button--container {
+    margin: 4rem auto;
+  }
+  button {
+    width: 500px;
+  }
+}
+@media only screen and (min-width:881px and min-height: 950px ) {
+  img {
+    max-width: 500px;
+    width: 100%;
+    max-height: 50vh;
+    height: 100%;
+}
+}
+
+
+@media (min-width: 1080px) {
+  img {
+    max-height: 50vh;
+  }
+  body {
+    margin-top: 100px;
+  }
+  .button--container {
+    margin: 4rem auto;
+  }
+  button {
+    width: 50vw;
   }
 }
