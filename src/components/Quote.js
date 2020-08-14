@@ -7,7 +7,7 @@ import "../App.css";
 
 const img2 = `https://image.tmdb.org/t/p/original/aiLF9OBQ7LcglmAg0pXjyonGwye.jpg`;
 
-const yeezybaby  = "https://i.imgur.com/3DB799e.png";
+const yeezybaby  = `https://i.imgur.com/3DB799e.png`;
 
 const Quote = ({ quote, error, isLoading, fetchKanyeQuote, isCartoon }) => {
   const [kanyeImg, kanyeImgAlt] = useImageAPI(`kanye west`);
