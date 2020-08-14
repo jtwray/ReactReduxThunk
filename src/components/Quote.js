@@ -8,7 +8,7 @@ import "../App.css";
 
 const img1 = yeezy;
 const img2 = `https://image.tmdb.org/t/p/original/aiLF9OBQ7LcglmAg0pXjyonGwye.jpg`;
-
+const yeezybaby  = "https://i.imgur.com/3DB799e.png";
 const Quote = ({ quote, error, isLoading, fetchKanyeQuote, isCartoon }) => {
   const [kanyeImg, kanyeImgAlt] = useImageAPI(`kanye west`);
   return (
@@ -28,7 +28,7 @@ const Quote = ({ quote, error, isLoading, fetchKanyeQuote, isCartoon }) => {
           </div> */}
           <div className="imageblock">
             <img
-              src={isCartoon == true ? img2 : yeezy || kanyeImgAlt || img2}
+              src={isCartoon == true ? img2 : yeezybaby || kanyeImgAlt || img2}
               styles={{ zIndex: "2" }}
               alt="images of Kanye West"
             />{" "}
